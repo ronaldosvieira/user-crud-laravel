@@ -1,6 +1,6 @@
 <?php
 
-use App\Task;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -16,22 +16,25 @@ use Illuminate\Support\Facades\Validator;
 */
 
 /**
- * Show Task Dashboard
+ * Show User Dashboard
  */
 Route::get('/', function () {
-    $tasks = Task::orderBy('created_at', 'asc')->get();
+    $users = User::orderBy('created_at', 'asc')->get();
     
-    return view('tasks', [
-        'tasks' => $tasks
+    return view('users', [
+        'users' => $users
     ]);
 });
 
 /**
- * Add New Task
+ * Add New User
  */
-Route::post('/task', function (Request $request) {
+Route::post('/user', function (Request $request) {
     $validator = validator::make($request->all(), [
         'name' => 'required|max:255',
+        'email' => 'required',
+        'birthday' => 'required',
+        'occupation' => 'required'
     ]);
     
     if ($validator->fails()) {
@@ -40,19 +43,25 @@ Route::post('/task', function (Request $request) {
             ->withErrors($validator);
     }
     
-    $task = new Task;
-    $task->name = $request->name;
-    $task->save();
+    $user = new User;
+    
+    $user->name = $request->name;
+    $user->email = $request->email;
+    $user->birthday = $request->birthday;
+    $user->occupation = $request->occupation;
+    $user->notes = $request->notes;
+    
+    $user->save();
     
     return redirect('/');
 });
 
 /**
- * Delete Task
+ * Delete User
  */
 
-Route::delete('/task/{task}', function (Task $task) {
-    $task->delete();
+Route::delete('/user/{user}', function (User $user) {
+    $user->delete();
     
     return redirect('/');
 });
