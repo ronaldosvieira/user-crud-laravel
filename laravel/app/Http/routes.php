@@ -41,7 +41,7 @@ Route::get('/', function () {
 Route::post('/user', function (Request $request) {
     $validator = validator::make($request->all(), [
         'name' => 'required|max:255',
-        'email' => 'required',
+        'email' => 'required|email',
         'birthday' => 'required|date_format:Y-m-d',
         'occupation' => 'required'
     ]);
