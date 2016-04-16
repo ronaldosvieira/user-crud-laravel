@@ -13,7 +13,7 @@
                     @include('common.errors')
 
                     <!-- New User Form -->
-                    <form action="/user" method="POST" class="form-horizontal">
+                    <form action="/createuser" method="POST" class="form-horizontal">
                         {{ csrf_field() }}
 
                         <!-- User Name -->
@@ -40,7 +40,7 @@
 
                             <div class="col-sm-6">
                                 <div class='input-group date' class='datepicker'>
-                                    <input type='text' data-provide="datepicker" data-date-format="yyyy-mm-dd" name="birthday" id="user-birthday" class="form-control"  value="{{ old('birthday') }}" placeholder="dd-mm-yyyy">
+                                    <input type='text' data-provide="datepicker" data-date-format="yyyy-mm-dd" name="birthday" id="user-birthday" class="form-control"  value="{{ old('birthday') }}" placeholder="yyyy-mm-dd">
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>

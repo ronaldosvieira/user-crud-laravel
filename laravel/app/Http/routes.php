@@ -22,7 +22,7 @@ Route::get('/', function () {
     $users = User::orderBy('created_at', 'asc')->get();
     
     $occupations = [
-        '' => '',
+        '' => '(Select one)',
         'student' => 'Student',
         'medic' => 'Medic',
         'driver' => 'Driver',
@@ -38,7 +38,7 @@ Route::get('/', function () {
 /**
  * Add New User
  */
-Route::post('/user', function (Request $request) {
+Route::post('/createuser', function (Request $request) {
     $validator = validator::make($request->all(), [
         'name' => 'required|max:255',
         'email' => 'required|email',
