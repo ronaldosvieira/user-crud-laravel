@@ -21,8 +21,17 @@ use Illuminate\Support\Facades\Validator;
 Route::get('/', function () {
     $users = User::orderBy('created_at', 'asc')->get();
     
+    $occupations = [
+        '' => '',
+        'student' => 'Student',
+        'medic' => 'Medic',
+        'driver' => 'Driver',
+        'developer' => 'Software Developer'
+    ];
+    
     return view('users', [
-        'users' => $users
+        'users' => $users,
+        'occupations' => $occupations
     ]);
 });
 

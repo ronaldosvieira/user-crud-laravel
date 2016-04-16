@@ -39,9 +39,8 @@
                             <label for="birthday" class="col-sm-3 control-label">Birthday</label>
 
                             <div class="col-sm-6">
-                                <!--<input type="text" name="birthday" id="user-birthday" class="form-control" value="{{ old('user') }}" placeholder="dd-mm-yyyy">-->
                                 <div class='input-group date' class='datepicker'>
-                                    <input type='text' data-provide="datepicker" data-date-format="yyyy-mm-dd" name="birthday" id="user-birthday" class="form-control"  value="{{ old('user') }}" placeholder="dd-mm-yyyy">
+                                    <input type='text' data-provide="datepicker" data-date-format="yyyy-mm-dd" name="birthday" id="user-birthday" class="form-control"  value="{{ old('birthday') }}" placeholder="dd-mm-yyyy">
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
@@ -54,7 +53,15 @@
                             <label for="occupation" class="col-sm-3 control-label">Occupation</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="occupation" id="user-occupation" class="form-control" value="{{ old('occupation') }}">
+                                <select name="occupation" class="form-control" id="user-occupation" value="{{ old('occupation') }}">
+                                    @foreach ($occupations as $key => $val)
+                                        @if (old('occupation') == $key)
+                                              <option value="{{ $key }}" selected>{{ $val }}</option>
+                                        @else
+                                              <option value="{{ $key }}">{{ $val }}</option>
+                                        @endif
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         
