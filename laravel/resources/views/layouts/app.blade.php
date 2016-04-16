@@ -33,9 +33,20 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    User List
+                    Simple User CRUD
                 </a>
             </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">User List</a></li>
+                    <li><a href="{{route('user.create')}}">Add User</a></li>
+                </ul>
+            <!--ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+                <li><a href="../navbar-static-top/">Static top</a></li>
+                <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+            </ul-->
+          </div>
 
         </div>
     </nav>
