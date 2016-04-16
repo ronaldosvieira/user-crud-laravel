@@ -21,7 +21,7 @@
                             <label for="name" class="col-sm-3 control-label">Name</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="name" id="user-name" class="form-control" value="{{ old('user') }}" placeholder="e.g. Luke Skywalker">
+                                <input type="text" name="name" id="user-name" class="form-control" value="{{ old('name') }}" placeholder="e.g. Luke Skywalker">
                             </div>
                         </div>
                         
@@ -30,7 +30,7 @@
                             <label for="email" class="col-sm-3 control-label">E-mail</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="email" id="user-email" class="form-control" value="{{ old('user') }}" placeholder="e.g. luke@rebels.com">
+                                <input type="text" name="email" id="user-email" class="form-control" value="{{ old('email') }}" placeholder="e.g. luke@rebels.com">
                             </div>
                         </div>
                         
@@ -39,7 +39,13 @@
                             <label for="birthday" class="col-sm-3 control-label">Birthday</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="birthday" id="user-birthday" class="form-control" value="{{ old('user') }}" placeholder="dd-mm-yyyy">
+                                <!--<input type="text" name="birthday" id="user-birthday" class="form-control" value="{{ old('user') }}" placeholder="dd-mm-yyyy">-->
+                                <div class='input-group date' class='datepicker'>
+                                    <input type='text' data-provide="datepicker" data-date-format="yyyy-mm-dd" name="birthday" id="user-birthday" class="form-control"  value="{{ old('user') }}" placeholder="dd-mm-yyyy">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         
@@ -48,7 +54,7 @@
                             <label for="occupation" class="col-sm-3 control-label">Occupation</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="occupation" id="user-occupation" class="form-control" value="{{ old('user') }}">
+                                <input type="text" name="occupation" id="user-occupation" class="form-control" value="{{ old('occupation') }}">
                             </div>
                         </div>
                         
@@ -57,7 +63,7 @@
                             <label for="notes" class="col-sm-3 control-label">Notes</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="notes" id="user-notes" class="form-control" value="{{ old('user') }}" placeholder="(optional)">
+                                <input type="text" name="notes" id="user-notes" class="form-control" value="{{ old('notes') }}" placeholder="(optional)">
                             </div>
                         </div>
 
