@@ -13,7 +13,7 @@
                     @include('common.errors')
 
                     <!-- New User Form -->
-                    <form action="/createuser" method="POST" class="form-horizontal">
+                    <form action="/user/create" method="GET" class="form-horizontal">
                         {{ csrf_field() }}
 
                         <!-- User Name -->
