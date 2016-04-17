@@ -70,7 +70,7 @@
                                     <i class="fa fa-btn fa-edit"></i>Edit
                                 </a>
                                 <!-- User Delete Button -->
-                                <a type="button" class="btn btn-default delete-btn" data-toggle="modal" data-target="#deleteModal" data-uid="{{ $user->id }}" data-uname="{{ $user->name }}">
+                                <a type="button" class="btn btn-danger delete-btn" data-toggle="modal" data-target="#deleteModal" data-uid="{{ $user->id }}" data-uname="{{ $user->name }}">
                                     <i class="fa fa-btn fa-trash"></i>Delete
                                 </a>
                             </div>
