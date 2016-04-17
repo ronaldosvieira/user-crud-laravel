@@ -34,8 +34,8 @@ class UserController extends Controller {
     public function store(Request $request) {
         $validator = validator::make($request->all(), [
             'name' => 'required|max:255',
-            'email' => 'required|email|unique:users',
-            'birthday' => 'required|date_format:Y-m-d',
+            'email' => 'required|email|unique:users,email',
+            'birthday' => 'required|date_format:Y-m-d|before:today',
             'occupation' => 'required'
         ]);
 
@@ -78,8 +78,8 @@ class UserController extends Controller {
     public function update(Request $request, int $id) {
         $validator = validator::make($request->all(), [
             'name' => 'required|max:255',
-            'email' => 'required|email',
-            'birthday' => 'required|date_format:Y-m-d',
+            'email' => 'required|email|unique:users,email,' . $id . ',id',
+            'birthday' => 'required|date_format:Y-m-d|before:today',
             'occupation' => 'required'
         ]);
 
