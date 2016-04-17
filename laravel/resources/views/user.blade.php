@@ -34,7 +34,7 @@
                                         </a>
                                         
                                         <!-- User Delete Button -->
-                                        <a type="button" class="btn btn-default delete-btn" data-toggle="modal" data-target="#deleteModal" data-uid="{{ $user->id }}" data-uname="{{ $user->name }}">
+                                        <a type="button" class="btn btn-danger delete-btn" data-toggle="modal" data-target="#deleteModal" data-uid="{{ $user->id }}" data-uname="{{ $user->name }}">
                                             <i class="fa fa-btn fa-trash"></i>Delete
                                         </a>
                                     </td>
@@ -44,10 +44,10 @@
                     </table>
                     @else
                     <p>No users found!</p>
+                    @endif
                     <a href="{{ route('user.create') }}" type="submit" class="btn btn-success">
                         <i class="fa fa-btn fa-plus"></i>Add a User
                     </a>
-                    @endif
                 </div>
             </div>
     </div>
