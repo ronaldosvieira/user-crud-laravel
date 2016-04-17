@@ -20,7 +20,7 @@
                         <tbody>
                             @foreach ($users as $user)
                                 <tr>
-                                    <td class="table-text">
+                                    <td class="table-text" style="vertical-align: middle;">
                                         <div>
                                             <a href="{{ route('user.show', ['id' => $user->id]) }}">
                                                 {{ $user->name }}
