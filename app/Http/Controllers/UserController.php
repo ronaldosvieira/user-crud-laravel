@@ -34,7 +34,7 @@ class UserController extends Controller {
     public function store(Request $request) {
         $validator = validator::make($request->all(), [
             'name' => 'required|max:255',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users',
             'birthday' => 'required|date_format:Y-m-d',
             'occupation' => 'required'
         ]);
