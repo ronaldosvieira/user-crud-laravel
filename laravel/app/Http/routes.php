@@ -17,33 +17,10 @@ use App\User;
  * Show User Dashboard
  */
 Route::get('/', function () {
-    $users = User::orderBy('created_at', 'asc')->get();
-    
-    $occupations = [
-        '' => '(Select one)',
-        'student' => 'Student',
-        'medic' => 'Medic',
-        'driver' => 'Driver',
-        'developer' => 'Software Developer'
-    ];
-    
-    return view('users', [
-        'users' => $users,
-        'occupations' => $occupations
-    ]);
+    return redirect('/user');
 });
 
 /**
  * Add New User
  */
 Route::resource('user', 'UserController');
-
-/**
- * Delete User
- */
-
-Route::delete('/user/{user}', function (User $user) {
-    $user->delete();
-    
-    return redirect('/');
-});
