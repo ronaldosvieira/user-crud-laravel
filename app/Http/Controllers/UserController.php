@@ -35,7 +35,7 @@ class UserController extends Controller {
         $validator = validator::make($request->all(), [
             'name' => 'required|max:255',
             'email' => 'required|email|unique:users,email',
-            'birthday' => 'required|date_format:Y-m-d|before:today',
+            'birthday' => 'required|before:today|after:1899-12-31|date_format:Y-m-d',
             'occupation' => 'required'
         ]);
 
@@ -49,7 +49,7 @@ class UserController extends Controller {
 
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->birthday = date("Y-m-d", strtotime($request->birthday));
+        $user->birthday = $request->birthday;
         $user->occupation = $request->occupation;
         $user->notes = $request->notes;
 
@@ -79,7 +79,7 @@ class UserController extends Controller {
         $validator = validator::make($request->all(), [
             'name' => 'required|max:255',
             'email' => 'required|email|unique:users,email,' . $id . ',id',
-            'birthday' => 'required|date_format:Y-m-d|before:today',
+            'birthday' => 'required|before:today|after:1899-12-31|date_format:Y-m-d',
             'occupation' => 'required'
         ]);
 
@@ -93,7 +93,7 @@ class UserController extends Controller {
         
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->birthday = date("Y-m-d", strtotime($request->birthday));
+        $user->birthday = $request->birthday;
         $user->occupation = $request->occupation;
         $user->notes = $request->notes;
         
