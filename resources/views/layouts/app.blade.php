@@ -56,8 +56,8 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="https://github.com/ronaldosvieira/user-crud-laravel">
-                            <i class="fa fa-btn fa-github fa-lg"></i>See on GitHub
+                        <a href="https://github.com/ronaldosvieira/user-crud-laravel" target="_blank">
+                            <i class="fa fa-btn fa-github fa-lg"></i>View on GitHub
                         </a>
                     </li>
                 </ul>
