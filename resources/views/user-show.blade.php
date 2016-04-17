@@ -30,7 +30,9 @@
                             <label for="email" class="col-sm-3 control-label">E-mail</label>
 
                             <div class="col-sm-6">
-                                <label class="control-label">{{ $user->email }}</label>
+                                <label class="control-label">
+                                    <a href="mailto:{{ $user->email }}">{{ $user->email }}</a>
+                                </label>
                             </div>
                         </div>
                         
