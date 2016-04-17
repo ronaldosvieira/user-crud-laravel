@@ -49,7 +49,7 @@ class UserController extends Controller {
 
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->birthday = $request->birthday;
+        $user->birthday = date("Y-m-d", strtotime($request->birthday));
         $user->occupation = $request->occupation;
         $user->notes = $request->notes;
 
@@ -93,7 +93,7 @@ class UserController extends Controller {
         
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->birthday = $request->birthday;
+        $user->birthday = date("Y-m-d", strtotime($request->birthday));
         $user->occupation = $request->occupation;
         $user->notes = $request->notes;
         
