@@ -11,10 +11,10 @@ use Illuminate\Support\Facades\Input;
 class UserController extends Controller {
     var $occupations = [
         '' => '(Select one)',
-        'student' => 'Student',
-        'medic' => 'Medic',
-        'driver' => 'Driver',
-        'developer' => 'Software Developer'
+        'Student' => 'Student',
+        'Medic' => 'Medic',
+        'Driver' => 'Driver',
+        'Software Developer' => 'Software Developer'
     ];
     
     public function index() {
