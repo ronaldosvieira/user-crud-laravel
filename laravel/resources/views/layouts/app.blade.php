@@ -43,8 +43,12 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">User List</a></li>
-                    <li><a href="{{ route('user.create') }}">Add User</a></li>
+                    <li class="{{ Request::is('user') ? 'active' : '' }}">
+                        <a href="{{ route('user.index') }}">User List</a>
+                    </li>
+                    <li class="{{ Request::is('user/create') ? 'active' : '' }}">
+                        <a href="{{ route('user.create') }}">Add User</a>
+                    </li>
                 </ul>
           </div>
 
