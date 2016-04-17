@@ -44,10 +44,14 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="{{ Request::is('user') ? 'active' : '' }}">
-                        <a href="{{ route('user.index') }}">User List</a>
+                        <a href="{{ route('user.index') }}">
+                            <i class="fa fa-btn fa-list"></i>User List
+                        </a>
                     </li>
                     <li class="{{ Request::is('user/create') ? 'active' : '' }}">
-                        <a href="{{ route('user.create') }}">Add User</a>
+                        <a href="{{ route('user.create') }}">
+                            <i class="fa fa-btn fa-plus"></i>Add User
+                        </a>
                     </li>
                 </ul>
           </div>
