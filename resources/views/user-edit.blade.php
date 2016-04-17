@@ -41,7 +41,7 @@
 
                             <div class="col-sm-6">
                                 <div class='input-group date' class='datepicker'>
-                                    <input type='text' data-provide="datepicker" data-date-format="yyyy-mm-dd" name="birthday" id="user-birthday" class="form-control"  value="{{ $user->birthday }}" placeholder="yyyy-mm-dd">
+                                    <input type='text' data-provide="datepicker" data-date-format="yyyy-mm-dd" name="birthday" id="user-birthday" data-date-end-date="0d" class="form-control"  value="{{ $user->birthday }}" placeholder="yyyy-mm-dd">
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
