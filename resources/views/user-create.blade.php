@@ -40,7 +40,7 @@
 
                             <div class="col-sm-6">
                                 <div class='input-group date' class='datepicker'>
-                                    <input type='text' data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-end-date="0d" name="birthday" id="user-birthday" class="form-control"  value="{{ old('birthday') }}" placeholder="yyyy-mm-dd">
+                                    <input type='text' data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-end-date="0d" name="birthday" id="user-birthday" class="form-control"  value="{{ old('birthday') }}" placeholder="e.g. 2012-12-21">
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
