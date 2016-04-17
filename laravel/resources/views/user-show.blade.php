@@ -67,8 +67,15 @@
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-6">
                                 <a class="btn btn-default" href="{{ route('user.edit', [ 'id' => $user->id]) }}">
-                                    <i class="fa fa-btn fa-edit"></i>Edit User
+                                    <i class="fa fa-btn fa-edit"></i>Edit
                                 </a>
+                                <form style="display: inline;" action="{{ route('user.destroy', $user->id) }}" method="POST">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fa fa-btn fa-trash"></i>Delete
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </form>
