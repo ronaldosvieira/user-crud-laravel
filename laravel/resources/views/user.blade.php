@@ -27,12 +27,16 @@
                                                 </a>
                                             </div></td>
 
-                                        <!-- User Delete Button -->
                                         <td>
-                                            <form action="/user/{{ $user->id }}" method="POST">
+                                            <!-- User Edit Button -->
+                                            <a href="{{ route('user.edit', $user->id) }}" class="btn btn-default">
+                                                <i class="fa fa-btn fa-edit"></i>Edit
+                                            </a>
+                                            
+                                            <!-- User Delete Button -->
+                                            <form style="display: inline;" action="{{ route('user.destroy', $user->id) }}" method="POST">
                                                 {{ csrf_field() }}
                                                 {{ method_field('DELETE') }}
-
                                                 <button type="submit" class="btn btn-danger">
                                                     <i class="fa fa-btn fa-trash"></i>Delete
                                                 </button>
