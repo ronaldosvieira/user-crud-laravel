@@ -79,7 +79,7 @@
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-6">
                                 <button type="submit" class="btn btn-default">
-                                    <i class="fa fa-btn fa-save"></i>Update User
+                                    <i class="fa fa-btn fa-save"></i>Update
                                 </button>
                             </div>
                         </div>
