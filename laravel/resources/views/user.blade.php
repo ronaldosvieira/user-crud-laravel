@@ -5,13 +5,13 @@
 <!-- Current Users -->
 <div class="container">
     <div class="col-sm-offset-2 col-sm-8">
-        @if (count($users) > 0)
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Current Users
                 </div>
 
                 <div class="panel-body">
+                    @if (count($users) > 0)
                     <table class="table table-striped user-table">
                         <thead>
                             <th>User</th>
@@ -42,9 +42,14 @@
                             @endforeach
                         </tbody>
                     </table>
+                    @else
+                    <p>No users found!</p>
+                    <a href="{{ route('user.create') }}" type="submit" class="btn btn-success">
+                        <i class="fa fa-btn fa-plus"></i>Add a User
+                    </a>
+                    @endif
                 </div>
             </div>
-        @endif
     </div>
 </div>
 
