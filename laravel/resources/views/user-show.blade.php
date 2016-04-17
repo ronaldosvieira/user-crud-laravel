@@ -63,19 +63,16 @@
                             </div>
                         </div>
 
-                        <!-- Add User Button -->
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-6">
+                                <!-- Add Edit Button -->
                                 <a class="btn btn-default" href="{{ route('user.edit', [ 'id' => $user->id]) }}">
                                     <i class="fa fa-btn fa-edit"></i>Edit
                                 </a>
-                                <form style="display: inline;" action="{{ route('user.destroy', $user->id) }}" method="POST">
-                                    {{ csrf_field() }}
-                                    {{ method_field('DELETE') }}
-                                    <button type="submit" class="btn btn-danger">
-                                        <i class="fa fa-btn fa-trash"></i>Delete
-                                    </button>
-                                </form>
+                                <!-- User Delete Button -->
+                                <a type="button" class="btn btn-default delete-btn" data-toggle="modal" data-target="#deleteModal" data-uid="{{ $user->id }}" data-uname="{{ $user->name }}">
+                                    <i class="fa fa-btn fa-trash"></i>Delete
+                                </a>
                             </div>
                         </div>
                     </form>
