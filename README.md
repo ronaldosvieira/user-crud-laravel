@@ -1,5 +1,5 @@
-# user-crud-laravel
-```user-crud-laravel``` é um simples aplicativo web de cadastro de usuários que explora a habilidade de desenvolvimento rápido fornecida pelo framework Laravel. O aplicativo é feito em PHP e utiliza o PostgreSQL para armazenar seus dados. Sua hospedagem é feita através do Heroku.
+# [user-crud-laravel](http://ronaldos-laravel-first-app.herokuapp.com/)
+[```user-crud-laravel```](http://ronaldos-laravel-first-app.herokuapp.com/) é um simples aplicativo web de cadastro de usuários que explora a habilidade de desenvolvimento rápido fornecida pelo framework Laravel. O aplicativo é feito em PHP e utiliza o PostgreSQL para armazenar seus dados. Sua hospedagem é feita através do Heroku.
 
 ## Requisitos
 * :white_check_mark: **Usar o framework PHP Laravel**;
@@ -31,5 +31,5 @@ A página apresenta uma tabela contendo todas as informações relacionadas ao u
 A página apresenta funcionalidade semelhante à página de criação de usuário, exceto que ao entrar na página de edição os campos já estarão preenchidos com as informações previamente registradas. O funcionamento do botão ```Update```, disposto após o formulário, é semelhante à do botão ```Add User``` da página de criação de usuário, exceto que não adicionará um novo usuário ao banco mas alterará o usuário existente.
 
 ## Possíveis melhorias
-* Modularizar e reutilizar componentes do front-end (ex. formulário);
+* Melhor modularização e reutilização dos componentes do front-end (ex. formulário);
 * Utilizar eventuais recursos inexplorados do Laravel (algumas partes do aplicativo podem ter sido desenvolvidas de maneira subótima por falta de conhecimento do framework).
